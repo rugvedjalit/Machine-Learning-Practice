@@ -1,64 +1,80 @@
-# Car Price Prediction using Geely Auto Dataset
+Geely Auto Car Price Prediction
+===============================
 
-## Overview
+Overview
+--------
 
-This project aims to predict car prices based on the Geely Auto Dataset. The dataset includes various features such as car specifications, engine details, and other relevant parameters. Machine learning techniques are employed to build a predictive model that can estimate the price of a car given its features.
+This repository contains the analysis and predictive modeling of car prices using the Geely Auto dataset. The purpose of this project is to identify factors that significantly influence car prices and to develop a regression model to predict car prices based on these factors.
 
-## Table of Contents
+Dataset
+-------
 
-- [Dataset](#dataset)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Model Training](#model-training)
-- [Evaluation](#evaluation)
-- [Contributing](#contributing)
-- [License](#license)
+The dataset used in this project is the "CarPrice\_Assignment.csv", which is a comprehensive dataset of different car models sold by the Geely Auto company. It includes various features of cars such as wheelbase, car length, car width, curb weight, engine size, horsepower, and miles per gallon in the city.
 
-## Dataset
+[Download the dataset here](https://www.kaggle.com/code/tanmoyx/car-price-prediction-geely-auto)
 
-The Geely Auto Dataset is included in the `data` directory. It contains the necessary data for training and testing the machine learning model. The dataset is in CSV format, and you can explore it to understand the available features.
+Features
+--------
 
-## Installation
+The features selected for predicting the car prices are:
 
-To run the project locally, follow these steps:
+*   **Wheelbase**: the distance between the front and rear wheels.
+    
+*   **CarLength**: length of the car.
+    
+*   **CarWidth**: width of the car.
+    
+*   **CurbWeight**: the weight of a car without occupants or baggage.
+    
+*   **EngineSize**: size of the car's engine.
+    
+*   **Horsepower**: the power output of the engine.
+    
+*   **CityMPG**: miles per gallon the car can achieve in urban driving.
+    
 
-1. Clone the repository:
+Exploratory Data Analysis
+-------------------------
 
-    ```bash
-    git clone https://github.com/your-username/Car-Price-Prediction-using-Geely-Auto-Dataset.git
-    ```
+We conducted an initial exploratory analysis to understand the relationship between the selected features and the car price. Pairplots were generated to visualize the relationships.
 
-2. Navigate to the project directory:
+Model Development
+-----------------
 
-    ```bash
-    cd Car-Price-Prediction-using-Geely-Auto-Dataset
-    ```
+A Linear Regression model was developed using the selected features. The dataset was split into training (80%) and testing (20%) sets using a random state for reproducibility.
 
-3. Install the required dependencies:
+Results
+-------
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+The Linear Regression model achieved the following performance:
 
-## Usage
+*   **Mean Squared Error (MSE)**: 14546204.444105463
+    
+*   **R-squared**: 0.8157402640248119
+    
 
-After installation, you can use the provided Jupyter notebooks to explore the dataset, train the model, and make predictions. The main notebooks are:
+This R-squared value suggests that approximately 81.57% of the variability in car prices can be explained using the model.
 
-- `1_Exploratory_Data_Analysis.ipynb`: Explore and visualize the dataset.
-- `2_Model_Training.ipynb`: Train the machine learning model.
-- `3_Prediction.ipynb`: Use the trained model to make predictions.
+Usage
+-----
 
-## Model Training
+To run the analysis yourself, ensure you have Python installed along with the following libraries:
 
-The machine learning model is trained using the `2_Model_Training.ipynb` notebook. In this notebook, various algorithms are tested, and the best-performing model is saved for future predictions.
+*   pandas
+    
+*   sklearn
+    
+*   matplotlib
+    
+*   seaborn
+    
 
-## Evaluation
+Conclusion
+----------
 
-The model's performance is evaluated using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), and R-squared. You can find the evaluation results in the respective notebook.
+The analysis and model demonstrate the significant impact of physical dimensions and engine characteristics on the pricing of cars in the Geely Auto dataset. For further improvements, additional features and different types of models could be explored.
 
-## Contributing
+Contact
+-------
 
-Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
-
-
-
+For any additional questions or contributions to this project, please reach out via GitHub issues or pull requests.
